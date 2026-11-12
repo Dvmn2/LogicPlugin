@@ -1,0 +1,28 @@
+settings:
+  # Plugin message language: "ru", "en" or "auto".
+  # "auto" uses the player's client locale; the console always gets English.
+  language: auto
+
+  # Maximum circuit width in cells (1..128). The editor protocol hard limit is 128.
+  max-width-cells: 64
+
+  # Maximum circuit height in cells (1..128).
+  max-height-cells: 64
+
+  # Simulation step period in ticks (1..100). One gate delay equals one step.
+  tick-interval-ticks: 4
+
+  # How often modified circuits are written to disk, in seconds (5..3600).
+  save-interval-seconds: 30
+
+  # Maximum number of circuits owned by one player (1..1000). Players with logic.admin are not limited.
+  max-circuits-per-player: 5
+
+  # Maximum number of commands attached to one output (1..64).
+  max-commands-per-output: 8
+
+  # Maximum length of one output command in characters (1..1024).
+  max-command-length-chars: 256
+
+  # An editor session is force-closed this many seconds after it was opened (30..86400).
+  editor-timeout-seconds: 900

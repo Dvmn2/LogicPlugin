@@ -1,8 +1,30 @@
 name: LogicPlugin
+description: Logic circuits edited in a client screen, driven by switches and wired to commands.
 version: '${version}'
 
 main: net.dvmn2.logicplugin.LogicPlugin
-api-version: '1.21.11'
+api-version: '1.21'
 load: POSTWORLD
 
 authors: [ DVMN2 ]
+
+permissions:
+  logic.use:
+    description: Use /logic, flip switches and edit circuits you may access
+    default: true
+  logic.create:
+    description: Create circuits
+    default: op
+  logic.command:
+    description: Manage the commands executed by circuit outputs
+    default: op
+  logic.reload:
+    description: Use /logic reload
+    default: op
+  logic.admin:
+    description: All administrative Logic permissions
+    default: op
+    children:
+      logic.create: true
+      logic.command: true
+      logic.reload: true
